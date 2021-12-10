@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Numero magico</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="fontawesome/fontawesome-free-5.14.0-web/css/all.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Material Design Bootstrap -->
+    <link rel="stylesheet" href="css/mdb.min.css">
+    <!-- Your custom styles (optional) -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="container py-5 my-5 z-depth-1" style="border-radius: 16px;">
+        <div class="card-header py-3 aqua-gradient">
+            <h6 class="m-0 font-weight-bold text-white">Número Magigo - Sirledys Rangel </h6>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive" id="main">
+                <h4>Número Magico</h4>
+                <div class="p-3">
+                    <h6>Porfavor ingrese su nombre para poder jugar</h6>
+                    <!-- guartar nombre -->
+                    <div class="form-row">
+                        <div class="md-form md-outline mt-3">
+                            <input type="text" name="register-first-name" id="register-first-name" class="form-control">
+                            <label for="register-first-name" class="">Nombre</label>
+                            <div class="invalid-feedback">
+                                su nombre debe tener entre 4 a 50 caracteres
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <button type="button" id="lisUser" class="btn btn-rounded blue-gradient waves-effect waves-light" onclick="listarUsers()">
+								<i class="fas fa-th-list pr-2" aria-hidden="true"></i>
+								Listar
+							</button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <!-- parte de numero magico -->
+                            <div class="card shadow mb-4 p-2">
+                                <label for="exampleSelect1">
+									<h4 class="py-2"><span class="badge badge-pill badge-info p-2">¡BIENVENIDOS!</span></h4>
+								</label>
+                                <label class="control-label px-3">
+									Juega el numero magico, tienes 
+									<span class="badge badge-pill badge-warning">10</span> 
+									intentos para ganar, el numero magico tiene un rango de 1 hasta el 1000, tu numero puede estar entre ellos, introduce tu numero.
+								</label>
+                                <div class="row px-3 py-3">
+                                    <div class="col-sm-6">
+                                        <div class="md-form md-outline mt-3">
+                                            <input type="number" name="number" id="number" class="form-control" disabled>
+                                            <label for="register-first-name" class="">Numero</label>
+                                            <small id="materialRegisterFormPasswordHelpBlock" class="form-text text-muted">
+												ingrese el numero entre 1 y 1000.
+											</small>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <button type="button" id="Btn_validar" class="btn btn-rounded mt-2 purple-gradient waves-effect waves-light btn-block" disabled onclick="validar()">
+											<i class="fas fa-play pr-2" aria-hidden="true"></i>
+											Jugar
+										</button>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn btn-rounded peach-gradient waves-effect waves-light btn-block" onclick="playagain()">
+									<i class="fas fa-redo pr-2" aria-hidden="true"></i>
+									Jugar de Nuevo
+								</button>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <!-- parte de instrucciones y ayuda -->
+                            <div class="card shadow mb-4 p-2">
+                                <label for="exampleSelect1">
+									<h4 class="py-2"><span class="badge badge-pill badge-info p-2"> Instrucciones</span></h4>
+								</label>
+                                <div class="bs-component px-3">
+                                    <p>
+                                        El juego del numero magico consiste en adivinar el numero que se genera aleatoriamente y tratar de hacerlo en los menos intentos posibles.
+                                    </p>
+                                    <label for="exampleSelect1">
+										<h6 class="py-2"><span class="badge badge-pill badge-info p-2"> Ayuda </span></h6>
+									</label>
+                                    <div class="alert alert-dismissible alert-info" style="text-align: justify;" id="description">
+                                        Cada vez que hagas un intento te saldra una pista si es mayor o menor asi te podras mas acercar al numero magico, recuerda que solo tienes
+                                        <span class="badge badge-pill badge-warning">10</span> oportunidades de adivinar, Buena suerte!.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card shadow mb-4 p-2">
+                        <label for="exampleSelect1">
+							<h4 class="py-2"><span class="badge badge-pill badge-info p-2"> Lista de Jugadores</span></h4>
+						</label>
+                        <div class="bs-component px-3">
+                            <p>
+                                Aqui se va ir mostrando la lista de tosdos los jugadores que participen en adivinar el numero, se mostraran con su fecha y hora de regitro a jugar.
+                            </p>
+                            <label for="exampleSelect1" class="d-sm-flex align-items-center justify-content-between mb-4">
+								<h6 class="py-2"><span class="badge badge-pill badge-info p-2"> Tabla jugadores actuales </span></h6>
+							</label>
+                            <table class="table table-striped" id="mytable">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Nombre</th>
+                                        <th>Fecha</th>
+                                        <th>Hora</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="" id="listData">
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="card shadow mb-4 p-2">
+                        <label for="exampleSelect1">
+							<h4 class="py-2"><span class="badge badge-pill badge-info p-2"> Historial de Jugadores </span></h4>
+						</label>
+                        <div class="bs-component px-3">
+                            <p>
+                                Se mustran todos los jugadores que han participado en el juego
+                            </p>
+                            <div id="history" class="alert alert-dismissible alert-info">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- jQuery -->
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+    <!--Sweetalert-->
+    <script type="text/javascript" src="js/sweetalert/sweetalert.min.js"></script>
+    <!-- Your custom scripts (optional) 
+	<script type="text/javascript" src="js/script.js"></script>-->
+    <script type="text/javascript" src="js/validar.js"></script>
+    <script type="text/javascrips" src="js/js_numMagico/tabla.js"></script>
+    <script type="text/javascript" src="js/js_numMagico/script.js"></script>
+
+</body>
+
+</html>

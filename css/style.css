@@ -1,0 +1,202 @@
+.text-small {
+  font-size: 0.75rem;
+}
+.card.card-cascade.narrower {
+  margin-top: 1.25rem;
+}
+.card.card-cascade.narrower .view.view-cascade {
+  margin-top: -1.25rem;
+  margin-right: 4%;
+  margin-left: 4%;
+}
+
+.card.card-cascade .view.view-cascade {
+  border-radius: 0.25rem;
+  -webkit-box-shadow: 0 5px 11px 0 rgb(0 0 0 / 18%),
+    0 4px 15px 0 rgb(0 0 0 / 15%);
+  box-shadow: 0 5px 11px 0 rgb(0 0 0 / 18%), 0 4px 15px 0 rgb(0 0 0 / 15%);
+}
+
+.btn-floating i {
+  display: inline-block;
+  width: inherit;
+  color: #fff;
+  text-align: center;
+}
+
+.btn-floating i {
+  font-size: 1.25rem;
+  line-height: 47px;
+}
+
+a:not([href]):not([tabindex]),
+a:not([href]):not([tabindex]):focus,
+a:not([href]):not([tabindex]):hover {
+  color: inherit;
+  text-decoration: none;
+}
+button:not(:disabled),
+[type="button"]:not(:disabled),
+[type="reset"]:not(:disabled),
+[type="submit"]:not(:disabled) {
+  cursor: pointer;
+}
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+a.waves-effect,
+a.waves-light {
+  display: inline-block;
+}
+.btn-floating {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  padding: 0;
+  margin: 10px;
+  overflow: hidden;
+  vertical-align: middle;
+  cursor: pointer;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 5px 11px 0 rgb(0 0 0 / 18%),
+    0 4px 15px 0 rgb(0 0 0 / 15%);
+  box-shadow: 0 5px 11px 0 rgb(0 0 0 / 18%), 0 4px 15px 0 rgb(0 0 0 / 15%);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  width: 47px;
+  height: 47px;
+}
+
+.btn-rounded {
+  border-radius: 10em;
+}
+
+.heading {
+  font-weight: 700;
+  color: #5d4267;
+}
+.card.colorful-card .testimonial-card .card-up {
+  height: 95px;
+}
+.card.colorful-card .testimonial-card .avatar {
+  border: 3px solid #fff !important;
+}
+.card.booking-card {
+  background-color: #c7f2e3;
+}
+.card.booking-card .fa {
+  color: #f7aa00;
+}
+.card.booking-card .card-body .card-text {
+  color: #db2d43;
+}
+.card.card.booking-card .chip {
+  background-color: #87e5da;
+}
+.card.booking-card .card-body hr {
+  border-top: 1px solid #f7aa00;
+}
+.mimosa {
+  background-color: #f0c05a;
+}
+.fuchsia-rose-text {
+  color: #db0075;
+}
+.aqua-sky-text {
+  color: #5cc6c3;
+}
+.mimosa-text {
+  color: #f0c05a;
+}
+.list-inline-item .fas,
+.list-inline-item .far {
+  font-size: 0.8rem;
+}
+.chili-pepper-text {
+  color: #9b1b30;
+}
+.collapse-content .fa.fa-heart:hover {
+  color: #f44336 !important;
+}
+.collapse-content .fa.fa-share-alt:hover {
+  color: #0d47a1 !important;
+}
+.card-wrapper.card-action {
+  min-height: 400px;
+}
+
+.card-wrapper .avatar {
+  display: block;
+  width: 120px;
+  margin-top: -60px;
+  overflow: hidden;
+}
+
+.white,
+.picker__list-item,
+.picker__box .picker__header .picker__select--month.browser-default,
+.picker__box .picker__header .picker__select--year.browser-default {
+  background-color: #fff !important;
+}
+
+.ml-auto,
+.mx-auto {
+  margin-left: auto !important;
+}
+.mr-auto,
+.mx-auto {
+  margin-right: auto !important;
+}
+
+.card-wrapper .avatar img {
+  width: 100%;
+  background: none repeat scroll 0 0 #fff;
+  border: 5px solid #fff;
+}
+
+.rounded-circle {
+  border-radius: 50% !important;
+}
+img {
+  vertical-align: middle;
+  border-style: none;
+}
+
+.skin-light .register-form,
+.skin-light .logout-form {
+  max-width: 30rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.skin-light .logout-form {
+  display: none;
+}
+
+.skin-light .register-form .form-check {
+  padding-left: 0;
+}
+
+.skin-light .md-form.md-outline .form-control.is-valid,
+.skin-light .md-form.md-outline .form-control.is-invalid {
+  background-position: right calc(0.375em + 0.1875rem) center !important;
+}
+
+.bg-gradient-primary {
+  background-color: #4e73df;
+  background-image: linear-gradient(180deg, #4e73df 10%, #224abe 100%);
+  background-size: cover;
+}
+
+.btn[disabled] {
+  cursor: not-allowed;
+}
+.btn.disabled,
+.btn:disabled {
+  opacity: 0.65;
+}
